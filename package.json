@@ -2,7 +2,10 @@
   "name": "js-assignment-chooserandom",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/wmarttala/js-assignment-chooserandom.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmarttala/js-assignment-chooserandom.git"
+  },
   "author": "Will Marttala <wmarttala123@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -36,5 +39,10 @@
     "env": [
       "mocha"
     ]
-  }
+  },
+  "description": "Students are to implement the ```chooseRandom``` function from the skeleton provided in ```lib.js```. This function takes an ```array``` and the number of random items to choose from the array (```numItems```). It should return a new array containing the correct number of randomly selected, unique items from the original array.",
+  "bugs": {
+    "url": "https://github.com/wmarttala/js-assignment-chooserandom/issues"
+  },
+  "homepage": "https://github.com/wmarttala/js-assignment-chooserandom#readme"
 }
