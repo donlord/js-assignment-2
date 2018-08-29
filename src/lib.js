@@ -1,4 +1,4 @@
-const chooseRandom = (array, numItems) => {
+export const chooseRandom = (array, numItems) => {
   // TODO check that array length is greater than 1
   if (array.length <= 2){
     return array
@@ -33,5 +33,5 @@ const chooseRandom = (array, numItems) => {
   return filteredArray
 }
 
-ray = [1,2,3,4,5]
-console.log(chooseRandom(ray,22))
+// ray = [1,2,3,4,5]
+// console.log(chooseRandom(ray,22))
