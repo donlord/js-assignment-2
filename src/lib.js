@@ -1,23 +1,24 @@
 export const chooseRandom = (array, numItems) => {
-  // TODO check that array length is greater than 1
+  if (array === undefined){
+    return []
+  }
   if (array.length <= 2){
     return array
   }
-  if (numItems > array.length){
+  if (numItems > array.length || numItems === undefined){
     numItems = Math.floor(Math.random() * array.length)
   }
-  
-  indexArray = []
-  //console.log(indexArray)
+  let indexArray = []
   //Fill indexArray with random indices
   while (indexArray.length != numItems){
-    randInt = Math.floor(Math.random()*array.length)
+    let randInt = Math.floor(Math.random()*array.length)
     if (indexArray.length === 0){
       indexArray.push(randInt)
     }
-    inArray = false
-    for (let i = 0; i <indexArray.length; i++){
-      if (indexArray[i]===randInt){
+    let inArray = false
+    //check to see if randomInt is in the indexed array, if so continue else add it to the indexArray
+    for (let i = 0; i < indexArray.length; i++){
+      if (indexArray[i] === randInt){
         inArray = true
       }
     }
@@ -26,12 +27,9 @@ export const chooseRandom = (array, numItems) => {
     }
   }
 //return the new array with the random values from indices indicated in indexArray
-  filteredArray = []
-  for (let i = 0; i< indexArray.length;i++){
+  let filteredArray = []
+  for (let i = 0; i < indexArray.length; i++){
     filteredArray.push(array[indexArray[i]])
   }
   return filteredArray
 }
-
-// ray = [1,2,3,4,5]
-// console.log(chooseRandom(ray,22))
